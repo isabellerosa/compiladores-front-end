@@ -1,4 +1,6 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.stmt;
+
+import uezo.compiladores.inter.Stmt;
 
 public class Seq extends Stmt {
     Stmt stmt1;

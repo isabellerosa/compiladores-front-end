@@ -1,6 +1,16 @@
 package uezo.compiladores.parser;
 
 import uezo.compiladores.inter.*;
+import uezo.compiladores.inter.expr.Constant;
+import uezo.compiladores.inter.expr.Id;
+import uezo.compiladores.inter.logical.And;
+import uezo.compiladores.inter.logical.Not;
+import uezo.compiladores.inter.logical.Or;
+import uezo.compiladores.inter.logical.Rel;
+import uezo.compiladores.inter.operator.Access;
+import uezo.compiladores.inter.operator.Arith;
+import uezo.compiladores.inter.operator.Unary;
+import uezo.compiladores.inter.stmt.*;
 import uezo.compiladores.lexer.*;
 import uezo.compiladores.symbol.Array;
 import uezo.compiladores.symbol.Env;

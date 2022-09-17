@@ -1,5 +1,6 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.logical;
 
+import uezo.compiladores.inter.Expr;
 import uezo.compiladores.lexer.Token;
 
 public class And extends Logical {

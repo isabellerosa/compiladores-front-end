@@ -1,5 +1,8 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.stmt;
 
+import uezo.compiladores.inter.Expr;
+import uezo.compiladores.inter.expr.Id;
+import uezo.compiladores.inter.Stmt;
 import uezo.compiladores.symbol.Type;
 
 public class Set extends Stmt {

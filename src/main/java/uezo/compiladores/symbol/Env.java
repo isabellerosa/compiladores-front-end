@@ -1,6 +1,6 @@
 package uezo.compiladores.symbol;
 
-import uezo.compiladores.inter.Id;
+import uezo.compiladores.inter.expr.Id;
 import uezo.compiladores.lexer.Token;
 
 import java.util.Hashtable;

@@ -1,5 +1,7 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.logical;
 
+import uezo.compiladores.inter.Expr;
+import uezo.compiladores.inter.expr.Temp;
 import uezo.compiladores.lexer.Token;
 import uezo.compiladores.symbol.Type;
 

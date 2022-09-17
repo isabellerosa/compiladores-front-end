@@ -9,7 +9,7 @@ public class Node {
         lexline = Lexer.line;
     }
 
-    void error(String s) {
+    public void error(String s) {
         throw new Error("near line " + lexline + ": " + s);
     }
 

@@ -1,5 +1,7 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.operator;
 
+import uezo.compiladores.inter.Expr;
+import uezo.compiladores.inter.expr.Op;
 import uezo.compiladores.lexer.Token;
 import uezo.compiladores.symbol.Type;
 

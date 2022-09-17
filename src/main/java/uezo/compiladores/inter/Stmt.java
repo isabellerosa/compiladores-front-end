@@ -9,7 +9,7 @@ public class Stmt extends Node {
     public void gen(int b, int a) {
     } // chamado com rótulos begin e after
 
-    int after = 0;
+    public int after = 0;
 
     public static Stmt Enclosing = Stmt.Null; // usado para comandos break
 }

@@ -1,5 +1,9 @@
-package uezo.compiladores.inter;
+package uezo.compiladores.inter.stmt;
 
+import uezo.compiladores.inter.Expr;
+import uezo.compiladores.inter.expr.Id;
+import uezo.compiladores.inter.Stmt;
+import uezo.compiladores.inter.operator.Access;
 import uezo.compiladores.symbol.Array;
 import uezo.compiladores.symbol.Type;
 
