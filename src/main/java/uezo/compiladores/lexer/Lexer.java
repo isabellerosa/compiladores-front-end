@@ -2,10 +2,12 @@ package uezo.compiladores.lexer;
 
 import uezo.compiladores.symbol.Type;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.Hashtable;
 
 public class Lexer {
+    private Reader source;
     public static int line = 1;
     char peek = ' ';
     Hashtable words = new Hashtable();
@@ -28,8 +30,20 @@ public class Lexer {
         reserve(Type.Float);
     }
 
+    public Lexer(File file) throws IOException {
+        this();
+        var encoding = Charset.defaultCharset();
+        var in = new FileInputStream(file);
+        var reader = new InputStreamReader(in, encoding);
+        this.source = new BufferedReader(reader);
+    }
+
     void readch() throws IOException {
-        peek = (char) System.in.read();
+        if (source == null) {
+            peek = (char) System.in.read();
+        } else {
+            peek = (char) source.read();
+        }
     }
 
     boolean readch(char c) throws IOException {
