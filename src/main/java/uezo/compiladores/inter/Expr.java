@@ -7,9 +7,12 @@ public class Expr extends Node {
     public Token op;
     public Type type;
 
-    protected Expr(Token tok, Type p) {
+    public Expr(Token tok, Type p) {
         op = tok;
         type = p;
+    }
+
+    public Expr() {
     }
 
     public Expr gen() {
@@ -29,7 +32,7 @@ public class Expr extends Node {
             emit("if " + test + " goto L" + t);
             emit("goto L" + f);
         } else if (t != 0) emit("if " + test + " goto L" + t);
-        else if (f != 0) emit("iffalse " + test + " goto L" + f);
+        else if (f != 0) emit("if false " + test + " goto L" + f);
         else ; // nada, porque ambos t e f fall through
     }
 

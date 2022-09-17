@@ -103,6 +103,13 @@ public class Parser {
             case ';':
                 move();
                 return Stmt.Null;
+            case Tag.PRINT:
+                match(Tag.PRINT);
+                match('(');
+                var stmt = output();
+                match(')');
+                match(';');
+                return new Print(stmt);
             case Tag.IF:
                 match(Tag.IF);
                 match('(');
@@ -166,6 +173,18 @@ public class Parser {
         }
         match(';');
         return stmt;
+    }
+
+    Expr output() throws IOException {
+        var expr = factor();
+
+        if (expr instanceof Id id) {
+            return id;
+        } else if (expr instanceof Constant constant) {
+            return constant;
+        }
+
+        return new Expr();
     }
 
     Expr bool() throws IOException {
